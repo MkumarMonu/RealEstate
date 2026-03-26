@@ -8,12 +8,12 @@ export default defineConfig({
     proxy: {
       '/api': {
         // target: 'http://localhost:5000',
-        target: 'https://realestatesbackend-port5000.up.railway.app',
+        target: 'https://realestatesbackend-production.up.railway.app',
         changeOrigin: true,
       },
       '/uploads': {
         // target: 'http://localhost:5000',
-        target: 'https://realestatesbackend-port5000.up.railway.app',
+        target: 'https://realestatesbackend-production.up.railway.app',
         changeOrigin: true,
       }
     }

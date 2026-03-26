@@ -64,28 +64,28 @@ const PropertyDetails = () => {
             <span className="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm font-bold tracking-wide uppercase">{property.propertyType}</span>
             <span className={`px-3 py-1 rounded-full text-sm font-bold tracking-wide uppercase ${property.status === 'Available' ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>{property.status}</span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-bold text-dark mb-2">{property.title}</h1>
-          <p className="flex items-center text-slate-500 text-lg"><FiMapPin className="mr-2" /> {property.address}</p>
+          <h1 className="text-3xl md:text-5xl font-bold text-dark mb-2">{property?.title}</h1>
+          <p className="flex items-center text-slate-500 text-lg"><FiMapPin className="mr-2" /> {property?.address}</p>
         </div>
         <div className="text-right">
-          <p className="text-4xl font-extrabold text-primary">${property.price.toLocaleString()}</p>
+          <p className="text-4xl font-extrabold text-primary">${property?.price.toLocaleString()}</p>
         </div>
       </div>
 
       {/* Image Gallery */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-12 h-[50vh] md:h-[60vh] rounded-2xl overflow-hidden">
         <div className="md:col-span-3 bg-slate-200 h-full relative group cursor-pointer">
-          <img src={property.images[0] || 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80'} alt="Main Property" className="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
+          <img src={property?.images[0] || 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=80'} alt="Main Property" className="w-full h-full object-cover transition duration-500 group-hover:scale-105" />
         </div>
         <div className="hidden md:grid grid-rows-2 gap-4 h-full">
           <div className="bg-slate-200 h-full overflow-hidden rounded-r-2xl cursor-pointer">
-            <img src={property.images[1] || 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80'} alt="Property 2" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
+            <img src={property?.images[1] || 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80'} alt="Property 2" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
           </div>
           <div className="bg-slate-200 h-full overflow-hidden rounded-r-2xl cursor-pointer relative">
-            <img src={property.images[2] || 'https://images.unsplash.com/photo-1600607688969-a5bfcd64bd40?auto=format&fit=crop&w=600&q=80'} alt="Property 3" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
-            {(property.images.length > 3) && (
+            <img src={property?.images[2] || 'https://images.unsplash.com/photo-1600607688969-a5bfcd64bd40?auto=format&fit=crop&w=600&q=80'} alt="Property 3" className="w-full h-full object-cover hover:scale-110 transition duration-500" />
+            {(property?.images.length > 3) && (
               <div className="absolute inset-0 bg-black/50 flex items-center justify-center pointer-events-none">
-                <span className="text-white text-xl font-bold">+{property.images.length - 3} Photos</span>
+                <span className="text-white text-xl font-bold">+{property?.images.length - 3} Photos</span>
               </div>
             )}
           </div>
