@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1d4ed8;
+  --color-secondary: #64748b;
+  --color-dark: #0f172a;
+  --color-light: #f8fafc;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 font-sans antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-blue-800 text-white font-bold py-2 px-4 rounded transition-colors duration-300;
+  }
+}
